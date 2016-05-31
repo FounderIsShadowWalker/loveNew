@@ -1,0 +1,874 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+div.header{
+  position: fixed;
+  width: 100%;
+  height: 54px;
+  top:0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  div.left{
+    float: left;
+    height: 32px;
+    margin-top: 10px;
+    position: relative;
+    vertical-align: top;
+    margin-left: 20px;
+    img{
+      position: relative;
+      display: inline-block;
+      background-position: center;
+      background-size: cover;
+      height: 38px;
+      width: 29px;
+      float: left;
+    }
+    div.search_form {
+       position: relative;
+       float: left;
+       overflow: hidden;
+       div.searchImg{
+         position: absolute;
+         left: 28px;
+         background: url("../images/serach.png") center center no-repeat;
+         background-size: cover;
+         height: 24px;
+         width: 24px;
+         margin-top: 10px;
+         z-index: 999;
+       }
+      #search_query {
+        position: relative;
+        transition: 75ms background, 75ms color;
+        display: inline-block;
+        float: left;
+        border: 0;
+        padding-right: 10px;
+        padding-bottom: 2px;
+        padding-left: 39px;
+        font-weight: 400;
+        font-size: 15px;
+        height: 34px;
+        width: 500px;
+        margin-left: 22px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 4px;
+      }
+    }
+    #search_query:focus{
+      outline: none;
+    }
+  }
+  div.right{
+    float: right;
+    height: 32px;
+    margin-top: 10px;
+    position: relative;
+    vertical-align: top;
+    margin-right: 20px;
+    a.login{
+      border: 0;
+      height: 32px;
+      max-width: 200px;
+      line-height: 22px;
+      margin-right: 10px;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: top;
+      display: inline-block;
+      padding: 5px 13px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      background-color: rgba(255,255,255,.5);
+      font-size: 14px;
+      color: #fffffa;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    }
+    a.signup{
+      background-color: rgba(255,255,255,.4);
+      color: #FFFFFF;
+      max-width: 200px;
+      overflow: hidden;
+      line-height: 22px;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 2px;
+      padding: 5px 13px;
+      display: inline-block;
+      cursor: pointer;
+      transition: all .25s cubic-bezier(.165,.84,.44,1),color .7s ease-out,opacity 1ms linear;
+    }
+  }
+}
+div.nav{
+  position: fixed;
+  left: 60px;
+  top:50%;
+  left: 30px;
+  z-index: 999;
+  div.dot{
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px #fff;
+    cursor: pointer;
+    height: 16px;
+    margin-bottom: 10px;
+    opacity: .4;
+    position: relative;
+    width: 16px;
+    box-sizing: border-box;
+  }
+}
+div.outerContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  div.innerContainer {
+    position: absolute;
+    width: 100%;
+    height: 600%;
+    top: 0px;
+    div.section {
+      position: relative;
+      width: 100%;
+      height: 16.7%;
+    }
+  }
+}
+div.innerContainer > div.section:nth-of-type(1){
+     div.firstPage{
+       position: relative;
+       background: url("../images/Tumblr_1.jpg") no-repeat center center;
+       background-color: #36465d;
+       width: 100%;
+       height: 100%;
+       transition: all 0.5s ease;
+       transition-delay: 2s;
+       top: 0px;
+       z-index: 1;
+       overflow: hidden;
+       .form_container{
+          position: relative;
+          left: 50%;
+          top: 50%;
+          margin-left: -400px;
+          width: 800px;
+          box-sizing:border-box;
+          padding: 20px 30px 30px;
+          margin-top: -177px;
+          opacity: 0;
+          transition: opacity .3s ease-in-out;
+          div.form_header{
+             margin-bottom: 14px;
+             h1{
+               position: relative;
+                overflow: hidden;
+                margin: auto;
+                width: 232px;
+                height: 50px;
+                a.logo_anchor{
+                  position: relative;
+                  background-size: 100% auto;
+                  background-image: url("../images/logo_large.png");
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  width: 100%;
+                  height: 100%;
+                  display: block;
+               }
+             }
+             h2.subheading{
+                width: 517px;
+                position: relative;
+                left: 50%;
+                margin: 10px 0 16px -258px;
+                font-size: 16px;
+                line-height: 22px;
+                white-space: nowrap;
+                color: #FFFFFF;
+                text-align: center;
+            }
+          }
+       div.login_form{
+         position: relative;
+         left: 50%;
+         opacity: 1;
+         margin-left: -151px;
+         width: 300px;
+         overflow: hidden;
+         box-sizing: border-box;
+            button{
+              position: relative;
+              height: 45px;
+              z-index: 1;
+              width: 300px;
+              margin: 12px 0 0 0;
+              font-weight: bold;
+              text-align: center;
+              line-height: 32px;
+              border-radius: 2px;
+              padding: 0px;
+              opacity: 1;
+              float: left;
+              box-sizing: border-box;
+              border: 0px;
+              color: #FFFFFF;
+              background: #529ecc;
+              cursor: pointer;
+              transition-property: height,opacity,margin;
+              transition-duration: .5s;
+              transition-delay: .5s;
+              transition-timing-function: ease;
+              display: block;
+              span{
+                display: block;
+                font-size: 16px;
+              }
+            }
+          a.explore{
+            font-size: 16px;
+            line-height: 22px;
+            white-space: nowrap;
+            display: block;
+            margin-top: 17px;
+            color: #fff;
+            text-align: center;
+            font-weight: 700;
+            margin-left: -6px;
+            float: left;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+          }
+         }
+       }
+       div.fullscreen_footer{
+         position: absolute;
+         bottom: 0px;
+         width: 100%;
+         height: 210px;
+         div.footer_link{
+           position: absolute;
+           opacity: 1;
+           color: #fff;
+           padding: 0 20px;
+           left: 0px;
+           bottom: 0px;
+           line-height: 25px;
+           margin: 0 0 13px 0;
+           text-align: center;
+           a.longin_link{
+             display: inline-block;
+             color: #fff;
+             text-decoration: none;
+             font-size: 14px;
+             padding-right: 5px;
+             margin-right: 12px;
+           }
+         }
+         div.footer_author{
+           position: absolute;
+           bottom: 0;
+           right: 0;
+           opacity: 1;
+           color: #fff;
+           font-size: 14px;
+           text-align: right;
+           padding: 0 12px;
+           margin: 0 0 13px 0;
+           line-height: 25px;
+           a{
+             margin: 0 0 0 10px;
+             display: inline-block;
+             width: 24px;
+             height: 24px;
+             display: block;
+             border-width: 0;
+             vertical-align: middle;
+             float: right;
+             background: url(../images/Tumblr_flower.png) center center no-repeat;
+           }
+         }
+       }
+     }
+     div.firstPage_footer{
+       position: absolute;
+       bottom: 0;
+       width: 100%;
+       background: #56bc8a;
+       height: 45px;
+       font-weight: 700;
+       cursor: pointer;
+       color: #fff;
+       box-shadow: inset 0 3px 0 rgba(0,0,0,.1);
+       line-height: 45px;
+       text-align: center;
+     }
+}
+div.innerContainer > div.section:nth-of-type(2){
+  background-color: #0099FF;
+  display: table;
+  div.word-wrapper{
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    div.ball{
+      position: relative;
+      height: 200px;
+      canvas{
+        display: block;
+        margin: 0 auto;
+      }
+      div.innerCircle{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        transition: all .5s ease;
+        background: url("../images/Tumblr_T.png") center center no-repeat;
+        background-size:contain;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+      }
+    }
+    div.section-content{
+      width: 540px;
+      margin: 0 auto;
+      line-height: 1.4;
+      color: #FFFFFF;
+      text-align: center;
+      h1.section-title{
+        font-size: 34px;
+        margin-bottom: 15px;
+        line-height: 1;
+        font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+        display: block;
+      }
+    }
+  }
+}
+div.innerContainer > div.section:nth-of-type(3){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #a77dc2;
+  text-align: left;
+  overflow: hidden;
+  z-index: 4;
+  div.section-wrapper{
+    margin-left: 140px;
+    margin-top: 120px;
+    div.section-content{
+      position: relative;
+      margin-bottom: 20px;
+      width: 500px;
+      line-height: 1.4;
+      z-index: 2;
+      h1.section-title{
+        font-size: 34px;
+        color: #fff;
+        font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+        line-height: 1;
+        margin-bottom: 15px;
+        margin-top: 0px;
+      }
+    }
+    div.blogs-post-column{
+      width: 250px;
+      margin-right: 20px;
+      transition-delay: .08s;
+      float: left;
+      opacity: 0;
+      transition: opacity .7s cubic-bezier(.165,.84,.44,1),transform .7s cubic-bezier(.165,.84,.44,1);
+      -webkit-transform:translateX(100px);
+      -ms-transform:translateX(100px);
+      transform:translateX(100px);
+      div.blogs-post{
+        position: relative;
+        background: #fff;
+        border-radius: 3px;
+        margin: 0 0 20px;
+        div.post-top{
+          height: 35px;
+          padding: 5px;
+          position: relative;
+          box-sizing: border-box;
+          div.ui-avatar {
+            background: url("../images/Tumblr_blog_poster1.png") center center no-repeat;
+            background-size: cover;
+            border-radius: 3px;
+            height: 25px;
+            float: left;
+            width: 25px;
+            margin-right: 10px;
+          }
+          a.ui-username{
+              color: #a2a2a2;
+              float: left;
+              font-size: 13px;
+              font-weight: 700;
+              line-height: 25px;
+              overflow: hidden;
+              text-decoration: none;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+
+          }
+        }
+        img.post-image{
+          display: block;
+          height: auto;
+          width: 100%;
+        }
+        div.post-bottom {
+          height: 35px;
+          padding: 5px;
+          position: relative;
+          box-sizing: border-box;
+          div.ui-notes {
+            color: #a2a2a2;
+            float: left;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 25px;
+            overflow: hidden;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          div.post_controls {
+            float: right;
+            height: 25px;
+
+            div.share {
+              position: relative;
+              color: #a2a2a2;
+              margin: 0 0 0 10px;
+              display: inline-block;
+              pacity: .31;
+              text-align: left;
+              height: 24px;
+              width: 24px;
+              cursor: pointer;
+              background-color: #FFFFFF;
+              background-size: cover;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+div.innerContainer > div.section:nth-of-type(4){
+  display: table;
+  background: #36465d;
+  text-align: left;
+  color: #fff;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  transition: opacity .7s cubic-bezier(.165,.84,.44,1),transform .7s cubic-bezier(.825,0,.5,1);
+  div.section-content{
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 1.4;
+    div.dashboard-content{
+      position: relative;
+      margin-left: 140px;
+      width: 370px;
+      left: 50%;
+      h1.section-title{
+        font-size: 42px;
+        color: #fff;
+        font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+        line-height: 1;
+        margin-bottom: 15px;
+        margin-top: 0px;
+      }
+    }
+  }
+  div.dashboard-graphic{
+    left: 50%;
+    margin-left: -440px;
+    position: absolute;
+    top: 110px;
+    width: 540px;
+    div.post_container{
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: #FFFFFF;
+      opacity: 0;
+      transition: opacity .7s cubic-bezier(.165,.84,.44,1),transform .7s cubic-bezier(.825,0,.5,1);
+      transform:translateY(100px);
+      div.post_avatar{
+        position: absolute;
+        border-radius: 3px;
+        background-color: #36465d;
+        height: 64px;
+        width: 64px;
+        top: 0px;
+        left: -85px;
+      }
+      img{
+        background-size: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    div.post-top-wrapper{
+      width: 540px;
+      font-size: 14px;
+      background-color: #FFFFFF;
+      padding: 15px 0 0;
+      word-wrap: break-word;
+      border-radius: 3px;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity .7s cubic-bezier(.165,.84,.44,1),transform .7s cubic-bezier(.825,0,.5,1);
+      transition-delay: .03s;
+      transform:translateY(100px);
+      div.post_avatar{
+        position: absolute;
+        border-radius: 3px;
+        background-color: #36465d;
+        height: 64px;
+        width: 64px;
+        top: 0px;
+        left: -85px;
+        img{
+          background-size: cover;
+          display: block;
+          width: 100%;
+        }
+      }
+      div.post-header{
+        height: 33px;
+        padding: 0px 20px;
+        color: #a1a1a1;
+        word-wrap: normal;
+        white-space: nowrap;
+        line-height: 20px;
+        div.post_info{
+          float: left;
+          max-width: 325px;
+          padding-right: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-weight: 700;
+          span{
+            color: #444;
+            white-space: nowrap;
+          }
+        }
+      }
+      div.post-content{
+        position: relative;
+        img{
+          background: url("../images/post-image1.jpg") center center no-repeat;
+          background-size: cover;
+          display: block;
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+div.innerContainer > div.section:nth-of-type(5){
+  position: absolute;
+  background: #f2992e;
+  display: table;
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  div.section-wrapper{
+    display: table-cell;
+    vertical-align: middle;
+    div.create-graphic{
+      width: 520px;
+      margin: 30px auto;
+      div.text-icon{
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        color: #f2992e;
+        display: inline-block;
+        position: relative;
+        margin: 0 15px 30px;
+        width: 10px;
+        height: 10px;
+        font-size: 30px;
+        line-height: 75px;
+        opacity: 0;
+        transition: opacity .7s cubic-bezier(.165,.84,.44,1),width .7s cubic-bezier(.825,0,.5,1),height .7s cubic-bezier(.825,0,.5,1);
+        img{
+          background-position: center;
+          background-size: cover;
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+        span{
+          font-size: 8px;
+          margin-top: 8px;
+          color: #fff;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          left: 0%;
+          line-height: 1;
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+    }
+    div.section-content{
+      width: 600px;
+      margin:0 auto;
+      line-height: 1.4;
+      h1.section-title{
+        font-size: 42px;
+        color: #fff;
+        font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+        line-height: 1;
+        margin-bottom: 15px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+div.innerContainer > div.section:nth-of-type(6){
+  background: url("../images/Tumblr_2.jpg") no-repeat center center;
+  background-color: #36465d;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  div.form_container_last{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-top: -210px;
+    margin-left: -400px;
+    width: 800px;
+    box-sizing: border-box;
+    padding: 20px 30px 30px;
+    opacity: 0;
+    transform:translateY(25px);
+    transition: opacity .7s cubic-bezier(.165,.84,.44,1),transform .7s cubic-bezier(.165,.84,.44,1);
+    div.form_header{
+      h1.section-title{
+        font-size: 34px;
+        margin-bottom: 15px;
+        line-height: 1;
+        font-family: "Gibson","Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+        display: block;
+        margin-top: 0px;
+        color: #FFFFFF;
+        text-align: center;
+      }
+      p.subheading{
+        width: 517px;
+        position: relative;
+        left: 50%;
+        margin: 10px 0 16px -258px;
+        font-size: 16px;
+        line-height: 22px;
+        white-space: nowrap;
+        color: #FFFFFF;
+        text-align: center;
+      }
+    }
+    div.login_form {
+      position: relative;
+      left: 50%;
+      opacity: 1;
+      margin-left: -151px;
+      width: 300px;
+      box-sizing: border-box;
+      button {
+        position: relative;
+        height: 45px;
+        z-index: 1;
+        width: 100%;
+        margin: 12px 0 0 0;
+        font-weight: bold;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 2px;
+        padding: 0px;
+        box-sizing: border-box;
+        border: 0px;
+        color: #FFFFFF;
+        background: #529ecc;
+        cursor: pointer;
+        span {
+          display: block;
+          font-size: 16px;
+        }
+      }
+      a.explore {
+        font-size: 16px;
+        line-height: 22px;
+        white-space: nowrap;
+        display: block;
+        margin-top: 17px;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        margin-left: -6px;
+        text-decoration: none;
+      }
+    }
+  }
+  div.footer_author{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    color: #fff;
+    font-size: 14px;
+    text-align: right;
+    padding: 0 12px;
+    margin: 0 0 13px 0;
+    line-height: 25px;
+    a{
+      margin: 0 0 0 10px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      display: block;
+      border-width: 0;
+      vertical-align: middle;
+      float: right;
+      background: url(../images/Tumblr_flower.png) center center no-repeat;
+    }
+  }
+}
+.loginAnimaition{
+  -webkit-animation:signupFormIntro .3s ease-out .7s;
+  animation:signupFormIntro .3s ease-out .7s;
+  -webkit-animation-fill-mode:backwards;
+  animation-fill-mode: backwards;
+}
+@-webkit-keyframes signupFormIntro {
+  0% {
+    opacity:0;
+    -webkit-transform:translateY(25px);
+    transform:translateY(25px)
+  }
+  100% {
+    opacity:1;
+    -webkit-transform:translateY(0);
+    transform:translateY(0)
+  }
+}
+@keyframes signupFormIntro {
+   0% {
+     opacity: 0;
+     -webkit-transform: translateY(25px);
+     transform: translateY(25px)
+   }
+   100% {
+     opacity: 1;
+     -webkit-transform: translateY(0);
+     transform: translateY(0)
+   }
+ }
+
+.active{
+  background: #fff;
+  box-shadow: none;
+  opacity: 1;
+}
+.large_word{
+  width: 100px;
+  height: 100px;
+}
+.search_active{
+  background: #fff;
+  color: #444;
+}
+.search_nonactive{
+  color: rgba(255,255,255,.5);
+  background: rgba(0,0,0,.13);
+}
+.noshow{
+  margin-top: -129px !important;
+}
+
+
+.email{
+  width: 100%;
+  padding: 11px 10px 11px 13px;
+  display: block;
+  margin: 0;
+  border: 0;
+  font: 16px/1.4 "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+  box-sizing: border-box;
+}
+.email:focus{
+  outline: none;
+}
+
+.hideValidate{
+  height: 0px !important;
+  margin: 0px !important;
+  opacity: 0  !important;
+}
+.hidePasswordValidate{
+  height: 0px !important;
+  opacity: 0  !important;
+
+}
+.clearfix{
+  clear: both;
+}
+
+.inputField{
+  width: 700px;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.nextEmail{
+  margin-left: 50px !important;
+  border-radius:2px 2px 0px 0px !important;
+}
+#password{
+  height: 0px;
+  margin-top: 0px;
+  margin-left: 350px;
+  border-radius:0px 0px 2px 2px;
+  border-top:1px solid #CCCCCC;
+}

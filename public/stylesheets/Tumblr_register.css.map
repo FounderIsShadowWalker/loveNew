@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAS;EACP,MAAM,EAAE,GAAG;EACX,UAAU,EAAE,GAAG;EACf,WAAW,EAAE,KAAK;EAClB,aAAa,EAAC,eAAe;EAC7B,UAAU,EAAC,iBAAiB;;AAE9B,SAAS;EACN,aAAa,EAAC,eAAgB",
+"sources": ["Tumblr_register.scss"],
+"names": [],
+"file": "Tumblr_register.css"
+}
