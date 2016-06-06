@@ -25,6 +25,86 @@ router.get('/Tumblr_register', function(req, res, next) {
   res.render('Tumblr_register', { title: 'Express' });
 });
 
+router.get('/Tumblr_search', function(req, res){
+    var args = URL.parse(req.url, true);
+    var queryItem = args.query.userid;
+    console.log("我想查询的Item:" + queryItem);
+    console.log("我自己的email:" + args.query.email);
+    //User.findOne({email: queryItem}).populate('posts').exec(function(err,doc){
+    //    console.log(doc.posts);
+    //    res.render('Tumblr_search', {search : JSON.stringify(doc.posts)})
+    //})
+
+    User.findOne({email: queryItem}).exec(function(err,docs){
+        User.findOne({email: args.query.email}).exec(function(err, doc){
+            console.log(doc.friendList);
+            var searchResult = {};
+            if(doc.friendList.indexOf(req.body["email"]) == "-1"){
+                searchResult.result = 0;                                   //还未加好友
+            }
+            else{
+                searchResult.result = 1;                                  //以添加好友
+            }
+            searchResult.content = docs;
+            res.render('Tumblr_search', {search : JSON.stringify(searchResult)})
+        })
+    })
+});
+
+router.post('/Tumblr_search', function(req, res){
+   console.log(req.body["email"]);
+   console.log(req.body["user"]);
+
+   User.findOne({email: req.body["user"]}).exec(function(err, doc){
+       if(doc.friendList.indexOf(req.body["email"]) == "-1")
+       doc.friendList.push(req.body["email"]);
+       console.log(doc);
+       console.log(doc.friendList);
+       User.update({_id : doc._id}, {friendList : doc.friendList},function(err, doc){
+            res.write("success");
+            res.end();
+
+       });
+   })
+
+});
+
+router.post('/blog_search', function(req, res,next){
+    var askSearch = req.body['search'];
+    var findResult = {};
+
+    function userSearch(resolve) {
+        User.find({email: new RegExp(askSearch)},function (err, docs) {
+            findResult.users = docs;
+            resolve("success");
+        })
+    }
+
+    function postSearch(para){
+       return new Promise(function(resolve, reject){
+            Post.find({title: new RegExp(askSearch)}, function(err,docs){
+                findResult.posts = docs;
+                resolve("success");
+            })
+       })
+    }
+
+    function Redirect(para){
+        res.write(JSON.stringify(findResult));
+        res.end();
+    }
+
+    new Promise(function(resolve, reject) {
+        userSearch(resolve);
+    }).then(function(para){
+            return postSearch(para);
+        }).then(function(para){
+            Redirect(para);
+        })
+
+})
+
+
 router.post('/Tumblr_login_test', function(req,res,next){
 
   console.log(req.body['myEmail']);
@@ -103,7 +183,6 @@ router.post('/Tumblr_register_test', function(req,res,next){
      }
   })
 
-
 })
 
 
@@ -139,6 +218,7 @@ router.get('/HomePage', function(req, res){
         res.render('HomePage', {post : JSON.stringify(doc.posts)})
     })
 });
+
 
 router.post('/HomePage', function(req, res){
 
@@ -287,5 +367,6 @@ router.post('/HomePage', function(req, res){
     res.render('HomePage', { title: TITLE });
 
 })
+
 
 module.exports = router;

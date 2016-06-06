@@ -29,11 +29,156 @@ div.header-container{
     margin: 3px -3px 0 0;
     display: block;
   }
+  div.popover_search{
+    position: absolute;
+    top: 48px!important;
+    left: 69px!important;
+    width: 80%;
+    max-width: 542px;
+    padding:1px;
+    cursor: default;
+    font: normal 14px/1.4 Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    background: rgba(0,0,0,.1);
+    z-index: 999;
+    div.popover_inner{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      box-sizing: border-box;
+      padding: 0 0 4px;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      div.tag_search_result{
+        position: relative;
+        box-sizing: border-box;
+        font-size: 100%;
+        h3.search_subheading{
+          position: relative;
+          height: 24px;
+          padding: 0 12px;
+          font-weight: 700;
+          font-size: 11px;
+          line-height: 23px;
+          border: none;
+          margin: 0 0 4px;
+          background: rgba(68,68,68,.07);
+          text-shadow: none;
+          color: rgba(68,68,68,.5);
+          z-index: 2;
+          box-sizing: border-box;
+        }
+        div.popover_menu_item{
+          position: relative;
+          padding: 0;
+          text-align: left;
+          border: none;
+          font-size: 14px;
+          font-weight: 400;
+          color: #444;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 45px;
+          display: table;
+          width: 100%;
+          cursor: pointer;
+          &:hover{
+             background: #E6EFF7;
+          }
+          a.result_link{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 12px;
+            max-width: 540px;
+            line-height: 21px;
+            width: 100%;
+            span.result_img{
+              position: absolute;
+              display: block;
+              top: 4px;
+              right: 12px;
+              height: 37px;
+              width: 37px;
+              margin: 0;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-color: rgba(0,0,0,.15);
+              background-position: center;
+              background-clip: content-box;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+      div.blog_search_result{
+        position: relative;
+        box-sizing: border-box;
+        h3.search_subheading{
+          position: relative;
+          height: 24px;
+          padding: 0 12px;
+          font-weight: 700;
+          font-size: 11px;
+          line-height: 23px;
+          border: none;
+          margin: 0 0 4px;
+          background: rgba(68,68,68,.07);
+          text-shadow: none;
+          color: rgba(68,68,68,.5);
+          z-index: 2;
+          box-sizing: border-box;
+        }
+        div.popover_menu_item{
+          position: relative;
+          padding: 0;
+          text-align: left;
+          border: none;
+          font-size: 14px;
+          font-weight: 400;
+          color: #444;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 45px;
+          display: table;
+          width: 100%;
+          a.result_link{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 12px;
+            max-width: 540px;
+            line-height: 21px;
+            width: 100%;
+            span.result_img{
+              position: absolute;
+              display: block;
+              top: 4px;
+              right: 12px;
+              height: 37px;
+              width: 37px;
+              margin: 0;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-color: rgba(0,0,0,.15);
+              background-position: center;
+              background-clip: content-box;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
   div.search_form {
     position: relative;
-    float: left;
+    float: left;       //left: 53px;对比搜索显示框66宽度得加13px
     overflow: hidden;
     margin-top: 5px;
+    width: 80%;
+    max-width: 566px;
     div.searchImg{
       position: absolute;
       left: 28px;
@@ -48,6 +193,7 @@ div.header-container{
       position: relative;
       transition: 75ms background, 75ms color;
       display: inline-block;
+      color: #ffffff;
       float: left;
       border: 0;
       background: rgba(0,0,0,.13);
@@ -57,7 +203,8 @@ div.header-container{
       font-weight: 400;
       font-size: 15px;
       height: 34px;
-      width: 500px;
+      width: 100%;
+      max-width: 542px;
       margin-left: 22px;
       border-radius: 3px;
       cursor: pointer;

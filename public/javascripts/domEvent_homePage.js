@@ -1,3 +1,9 @@
+/**
+ * N 工具集
+ * Post 构建socket.io
+ *
+ */
+
 define(['N','Post'],function(N,Post){
   var popover = $$.selector("div","#popover")[0],
       blog_container = $$.selector("div","blog_container")[0],
@@ -20,6 +26,9 @@ define(['N','Post'],function(N,Post){
       post_type = $$.selector('div','text'),
       upload_files = [],
       hiddenPost = $$.selector('div','#hiddenPost')[0],
+      search_query = $$.selector('input','#search_query')[0],
+      header_container = $$.selector('div','header-container')[0],
+      compose_button = $$.selector('a','compose-button')[0],
       m;
 
       var post_nodeHTML = outInnerHtml(post_node);
@@ -88,6 +97,82 @@ define(['N','Post'],function(N,Post){
            var shell = document.createElement('div');
            shell.innerHTML = para;
            return shell.childNodes[0];
+      }
+
+      // 给搜索框加查询事件  函数赋值的声明 函数名不会暴露在全局
+      search_query.onkeyup = function searchResult(e){
+            // throttle
+             searchResult.show && clearTimeout(searchResult.show) && (searchResult.show = null);
+
+             searchResult.show = setTimeout(function(){
+
+                 var  popover_search = $$.selector('div', "popover_search")[0];
+                 popover_search && popover_search.parentNode.removeChild(popover_search);
+
+                 if(search_query.value !== "") {
+                     $$.request("post", "/blog_search", function (result) {
+                         result = JSON.parse(result);
+                         console.log(result.users);
+                         console.log(result.posts);
+
+                         var para_result = "<div class='popover_inner'>" +
+                             "<div class='tag_search_result'>" +
+                             "<h3 class='search_subheading'>搜索</h3>";
+
+                         var search_result = "";
+                         for (var i = 0; i < result.users.length; i++) {
+                             search_result += "<div class='popover_menu_item'>" +
+                                 "<a class='result_link'>" +
+                                 "<span>"+ result.users[i].email +"</span>" +
+                                 "<span class='result_img' style=\"background-image: url('../images/post_avatar2.png')\"></span>" +
+                                 "</a></div>"
+
+                         }
+
+                         var para_blog = "</div>" +
+                             "<div class='blog_search_result'>" +
+                             "<h3 class='search_subheading'>博客</h3>";
+
+                         var search_result_blog = "";
+                         for (var i = 0; i < result.posts.length; i++) {
+                             search_result_blog += "<div class='popover_menu_item'>" +
+                                 "<a class='result_link'>" +
+                                 "<span>"+ result.posts[i].title +"</span>" +
+                                 "<span class='result_img' style=\"background-image: url('../images/post_avatar2.png')\"></span>" +
+                                 "</a></div>"
+                         }
+
+                         result.posts.length === 0 ? para_blog = "" : "";
+
+                         var outerDiv = document.createElement('div');
+                         outerDiv.className = "popover_search";
+                         outerDiv.innerHTML = para_result + search_result + para_blog + search_result_blog;
+                         header_container.insertBefore(outerDiv, compose_button);
+
+
+                         outerDiv.addEventListener('click', function(e){
+                             var e = e || window.event,
+                                 tar = e.target || e.srcElement;
+
+                             if(tar.tagName.toLocaleLowerCase() === "a" && tar.className === "result_link"){
+                                 var span = $$.getParentByTag(tar,'span')[0];
+                                 window.location.href = "Tumblr_search?userid=" + span.innerHTML + "&&email=" + window.localStorage.getItem("userMail");
+                             }
+
+                         },false);
+                     }, {search: search_query.value});
+                 }
+                //模版方法
+            },1000);
+
+
+      }
+
+      //注销搜索框输入回车
+      search_query.onkeydown = function(e){
+          if(e.keyCode === 13){
+              return false;
+          }
       }
 
       post_type[0].addEventListener("click", function(){

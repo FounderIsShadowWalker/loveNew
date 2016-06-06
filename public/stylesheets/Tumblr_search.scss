@@ -1,0 +1,739 @@
+*{
+  -webkit-font-smoothing: antialiased;
+}
+
+body,html{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background: #36465d;
+}
+div.fix-head-container {
+  box-shadow: 0 0 0 1px hsla(0,0%,100%,.13);
+  z-index: 90;
+  background-color: #36465d;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  div.header-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    padding: 0 20px 0 0;
+    z-index: 1;
+    height: 54px;
+    h1.logo {
+      position: relative;
+      float: left;
+      height: 80%;
+      background: url("../images/Tumblr_T.png") no-repeat center center;
+      background-size: 25px auto;
+      width: 50px;
+      margin: 3px -3px 0 0;
+      display: block;
+    }
+    div.search_form {
+      position: relative;
+      float: left; //left: 53px;对比搜索显示框66宽度得加13px
+      overflow: hidden;
+      margin-top: 5px;
+      width: 80%;
+      max-width: 566px;
+      div.searchImg {
+        position: absolute;
+        left: 28px;
+        background: url("../images/serach.png") center center no-repeat;
+        background-size: cover;
+        height: 24px;
+        width: 24px;
+        margin-top: 10px;
+        z-index: 999;
+      }
+      #search_query {
+        position: relative;
+        transition: 75ms background, 75ms color;
+        display: inline-block;
+        color: #ffffff;
+        float: left;
+        border: 0;
+        background: rgba(0, 0, 0, .13);
+        padding-right: 10px;
+        padding-bottom: 2px;
+        padding-left: 39px;
+        font-weight: 400;
+        font-size: 15px;
+        height: 34px;
+        width: 100%;
+        max-width: 542px;
+        margin-left: 22px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 4px;
+      }
+    }
+    #search_query:focus {
+      outline: none;
+    }
+
+    div.tab_container {
+      height: 100%;
+      position: relative;
+      margin: 0 auto;
+      float: right;
+      div.tab_bar {
+        height: 32px;
+        position: relative;
+        padding-top: 12px;
+        padding-right: 0px;
+        a.tab_anchor {
+          cursor: pointer;
+          margin-top: -3px;
+          height: 35px;
+          text-decoration: none;
+          text-align: center;
+          display: block;
+          width: 50px;
+          float: left;
+          margin-left: 10px;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+  div.discover-controls-wrapper {
+    border-top: 1px solid hsla(0, 0%, 100%, .13);
+    height: 35px;
+    padding: 0 10px;
+    white-space: nowrap;
+    div.types-tabs {
+      height: 100%;
+      float: left;
+      overflow: hidden;
+      a.content-control {
+        display: block;
+        float: left;
+        padding: 10px 7px;
+        font-size: 14px;
+        color: hsla(0, 0%, 100%, .5);
+        line-height: 1.07em;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+div.container{
+  position: relative;
+  min-width: 960px;
+  box-sizing: border-box;
+  padding: 119px 30px 0 30px;
+  font-size: 100%;
+  overflow: hidden;
+  div.search_result{
+    position: relative;
+    div.search_sub_header{
+      margin: -6px 0 26px;
+      text-transform: uppercase;
+      text-align: center;
+      h1.search_term_heading{
+        font: normal 24px/27px Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+        margin: 0 auto 6px;
+        max-width: 375px;
+        color: #ffffff;
+      }
+      div.related_searches{
+        font-size: 12px;
+        font-weight: 700;
+        min-height: 16px;
+        color: hsla(0,0%,100%,.5);
+        span.related_searches_label{
+          padding-right: 5px;
+          font-size: 100%;
+        }
+        a.search_control_link{
+          font-size: 12px;
+          font-weight: 700;
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: bold;
+          font-family: Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+        }
+      }
+    }
+    div.results{
+      position: relative;
+      div.blog_user_search:before{
+        content: '';
+        position: absolute;
+        width: 320px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
+      div.blog_user_search{
+         position: relative;
+         height: 320px;
+         margin: 0 -20px 0 -20px;
+         overflow-x: hidden;
+        div.blog_wrapper{
+          position: absolute;
+          height: 100%;
+          width: 2580px;
+          transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+          transition-duration: 0ms;
+          transform: translate(0px, 0px) translateZ(0px);
+          z-index: 1;
+          div.search_row{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 300px;
+            div.blog_model{
+              position: relative;
+              left: 0px;
+              display: block;
+              height: 307px;
+              overflow: hidden;
+              float: left;
+              margin: 0 0 0 20px;
+              border-radius: 3px;
+              color: #444444;
+              background: #ffffff;
+              min-height: 50px;
+              width: 300px;
+              cursor: pointer;
+              div.navigation:before{
+                content: "";
+                position: absolute;
+                height: 60px;
+                left: 0;
+                opacity: .3;
+                top: 0;
+                width: 100%;
+                background: linear-gradient(to bottom,black 0,transparent 100%);
+              }
+              div.navigation{
+                height: 50px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 70;
+                div.navigation_inner{
+                  position: relative;
+                  line-height: 30px;
+                  padding: 10px;
+                  position: relative;
+                  text-align: right;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  span.name{
+                    max-width: 160px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-size: 14px;
+                    float: left;
+                    color: #ffffff;
+                    font-weight:bold;
+                    font-family: Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+                  }
+                  div.header_control {
+                    position: relative;
+                    float: right;
+                    margin-right: 10px;
+                    height: 30px;
+                    span.user{
+                      background: url("../images/Tumblr_user.png") no-repeat center center;
+                      background-size: cover;
+                      display: block;
+                      float: left;
+                      height: 90%;
+                      width: 24px;
+                      margin-right: 18px;
+                    }
+                    button.follow{
+                      height: 30px;
+                      background: #FFFFFF;
+                      border: 0;
+                      color: #444;
+                      min-width: 69px;
+                      position: relative;
+                      cursor: pointer;
+                      font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+                      font-size: 13px;
+                      line-height: 14px;
+                      padding: 4px 7px 5px 7px;
+                      font-weight: bold;
+                      border-radius: 2px;
+                      float: right;
+                      display: block;
+                    }
+                    button.follow:focus{
+                      outline: none;
+                    }
+                  }
+                }
+              }
+              div.header_image_wrapper{
+                position: relative;
+                height: 140px;
+                border-radius: 3px 3px 0 0;
+                background-position: center;
+                background-size: cover;
+                overflow: hidden;
+              }
+              div.avatar_square{
+                position: relative;
+                background-color: #FAFAFA;
+                color:  #FAFAFA;
+                margin: -48px auto 15px;
+                width: 62px;
+                height: 62px;
+                opacity: 1;
+                border-radius: 4px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                z-index: 10;
+                background-size: cover;
+                box-shadow: 0 0 0 4px;
+                box-sizing: content-box;
+              }
+              div.info_wrapper{
+                height: 47px;
+                margin-top: 0;
+                transition: all .2s;
+                color: #444444;
+                div.info{
+                  position: relative;
+                  top: 30%;
+                  padding: 0 5px;
+                  text-align: center;
+                  h1{
+                    font-size: 18px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: 1.2;
+                    margin: -5px 0 5px;
+                    font-weight: bold;
+                    font-family: Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+                  }
+                }
+              }
+              div.recent_posts{
+                position: relative;
+                border-radius: 0 0 3px 3px;
+                padding: 10px 0;
+                height: 80px;
+                img{
+                  width: 80px;
+                  height: 80px;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  display: block;
+                  float: left;
+                  margin-left: 10px;
+                  border-radius: 3px;
+                }
+              }
+            }
+          }
+        }
+        span.left{
+          position: absolute;
+          left:0px;
+          width: 65px;
+          bottom: 13px;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+          z-index: 2;
+          height: 100%;
+          span.left_icon{
+            right: 0;
+            background-position: -3px -4px;
+            background-image: url("../images/Tumblr_search_sprite.png");
+            background-size: 300px 450px;
+            font-size: 40px;
+            font-weight: 700;
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            bottom: 0;
+            text-align: center;
+            width: 27px;
+            height: 45px;
+            background-repeat: no-repeat;
+            margin-top: -40px;
+          }
+        }
+        span.right{
+          position: absolute;
+          right: 0px;
+          width: 65px;
+          bottom: 13px;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+          z-index: 2;
+          height: 100%;
+          span.right_icon{
+            left: 0;
+            background-position: -2px -54px;
+            background-image: url("../images/Tumblr_search_sprite.png");
+            background-size: 300px 450px;
+            font-size: 40px;
+            font-weight: 700;
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            bottom: 0;
+            text-align: center;
+            width: 27px;
+            height: 45px;
+            background-repeat: no-repeat;
+            margin-top: -40px;
+          }
+        }
+        div.iScrollHorizontalScrollbar{
+          left: 0px;
+          right: 0px;
+          position: absolute;
+          left: 20px;
+          bottom: 1px;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity .6s ease;
+          div.iScrollIndicator{
+            position: relative;
+            top:0;
+            left: 0;
+            transition-duration: 0ms;
+            display: block;
+            width: 425px;
+            transform: translate(0px, 0px) translateZ(0px);
+            transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+            border-radius: 4px;
+            border-color: transparent;
+            background: #ccc;
+            background: hsla(0,0%,78%,.5);
+            height: 8px;
+            cursor: pointer;
+          }
+        }
+      }
+      div.blog_mask_left{
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        z-index: 1;
+        left: 0px;
+        height: 310px;
+        width: 330px;
+        //-webkit-transform: translateX(295px);
+        //transform: translateX(295px);
+        transform: translateX(-30px);
+        background-color: #36465d;
+        opacity: 0.6;
+      }
+      div.blog_mask_right{
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        transform: translateX(30px);
+        height: 310px;
+        right: 0px;
+        width: 330px;
+        background-color: #36465d;
+        opacity: 0.6;
+        z-index: 1;
+      }
+      div.search_results_bottom_wrapper{
+        position: relative;
+        margin: 20px -30px 0 -30px;
+        min-height: 500px;
+        max-width: 1580px;
+        padding: 0 30px 120px;
+        div.search_controls{
+          color: hsla(0,0%,100%,.5);
+          font-weight: 700;
+          margin: -12px 0 0;
+          padding: 12px 0;
+          div.search_control_items{
+            position: relative;
+            float: left;
+            span.control_text{
+              color: hsla(0, 0%, 100%, .5);
+              margin-right: 16px;
+              font-size: 14px;
+              float: left;
+            }
+            span.icon_down{
+              background: url('../images/Tumblr_icon_down.png') center  no-repeat;
+              background-size: cover;
+              margin-top: 1px;
+              height: 14px;
+              width: 14px;
+              float: left;
+            }
+          }
+        }
+        div#post {
+          position: relative;
+          width: 942px;
+          margin: 10px auto 0;
+          overflow: hidden;
+          ol.posts {
+            position: relative;
+            list-style-type: none;
+            margin: 0 0 0 0px;
+            width: 314px;
+            float: left;
+            padding: 0 30px 0 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            li.post_container {
+              position: relative;
+              margin: 0 0 20px 0;
+              -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+              box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+              background-color: #AA0000;
+              width: 100%;
+              div.post_full {
+                position: relative;
+                height: 99px;
+                min-height: 99px;
+                width: auto;
+                padding: 0;
+                text-align: center;
+                clear: both;
+                transition: all .3s ease;
+                background-color: #fff;
+                word-wrap: break-word;
+                border-radius: 4px;
+                div.iconContainer {
+                  position: relative;
+                  background-size: cover;
+                  transition: all .2s ease;
+                  min-height: 90px;
+                  height: auto;
+                  top: 0;
+                  left: 0;
+                  padding-top: 15px;
+                  box-sizing: border-box;
+                  div.text {
+                    position: relative;
+                    float: left;
+                    height: 45px;
+                    width: 77px;
+                    background-position: center;
+                    background-size: cover;
+                    &:hover {
+                      margin-top: -4px;
+                    }
+                  }
+                  div.textContainer {
+                    position: relative;
+                    height: 30px;
+                    float: left;
+                    padding-top: 7px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    text-align: center;
+                    span {
+                      position: relative;
+                      display: block;
+                      float: left;
+                      width: 77px;
+                      color: #696969;
+                      font-size: 15px;
+                      height: 100%;
+                    }
+                  }
+                }
+              }
+              div.post_wrapper_container {
+                position: relative;
+                width: 100%;
+                font-size: 14px;
+                background: #FFFFFF;
+                padding: 15px 0 0 0;
+                margin: 0 auto;
+                word-wrap: break-word;
+                border-radius: 3px;
+                box-sizing: border-box;
+                div.post_avator {
+                  border-radius: 3px;
+                  position: absolute;
+                  background-image: url("../images/post_avatar2.png");
+                  background-position: center;
+                  background-size: cover;
+                  display: block;
+                  overflow: visible;
+                  height: 64px;
+                  width: 64px;
+                  left: -85px;
+                  top: 0;
+                }
+                div.post_wrapper {
+                  box-sizing: border-box;
+                  div.post_header {
+                    padding-right: 20px;
+                    padding-left: 20px;
+                    color: #a1a1a1;
+                    word-wrap: normal;
+                    white-space: nowrap;
+                    font-size: 13px;
+                    margin: -3px 0 0 0;
+                    line-height: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                    div.post_info_recommended {
+                      float: left;
+                      max-width: 200px;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      padding-right: 10px;
+                      text-overflow: ellipsis;
+                      box-sizing: border-box;
+                      a.post_info_link {
+                        color: #a2a2a2;
+                        font-weight: bold;
+                      }
+                    }
+                    div.post_action_wrapper {
+                      float: right;
+                      box-sizing: border-box;
+                      div.discover_button {
+                        display: inline-block;
+                        margin-left: 10px;
+                        background: url("../images/Tumblr_border_discovery.png") no-repeat center;
+                        background-size: cover;
+                        height: 23px;
+                        width: 23px;
+                      }
+                    }
+                  }
+                  div.post_content {
+                    clear: both;
+                    a.post_media_photo {
+                      display: block;
+                      img {
+                        display: block;
+                        height: auto;
+                        width: 100%;
+                        //别在这写src 否则不自适应
+                      }
+                    }
+                  }
+                  div.post_footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    width: 100%;
+                    line-height: 45px;
+                    height: 45px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    span {
+                      height: 100%;
+                      float: left;
+                      display: block;
+                      font-size: 13px;
+                      cursor: pointer;
+                      color: #a1a1a1;
+                    }
+                    span.post_img {
+                      position: relative;
+                      height: 100%;
+                      float: right;
+                      display: block;
+                      width: 24px;
+                      height: 24px;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      margin: 10px 4px;
+                      box-sizing: border-box;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        div#auto_pagination_loader{
+          position: absolute;
+          padding: 15px 0 35px;
+          color: #FFFFFF;
+          text-align: center;
+          width: 900px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          div.loading-container{
+            margin: 0 0 0 105px;
+            display: block;
+            width: 540px;
+            div.Knight-Rider-bar{
+              height: 20px;
+              width: 20px;
+              display: inline-block;
+              margin: 0 3px;
+              border-radius: 5px;
+              background-color: #d9d9d9;
+              opacity: .5;
+              -webkit-animation: knight-rider-oscillate ease-in-out .3s infinite alternate;
+              animation: knight-rider-oscillate ease-in-out .3s infinite alternate
+            }
+            div.Knight-Rider-bar:nth-of-type(1){
+              -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s
+            }
+            div.Knight-Rider-bar:nth-of-type(2){
+              -webkit-animation-delay: 0.1s;
+              animation-delay: 0.1s
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes knight-rider-oscillate {
+  0% {
+    opacity: .5;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1.4);
+    transform: scaleY(1.4)
+  }
+}
+
+@keyframes knight-rider-oscillate {
+  0% {
+    opacity: .5;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scaleY(1.4);
+    transform: scaleY(1.4)
+  }
+}

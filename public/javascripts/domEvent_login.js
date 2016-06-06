@@ -69,6 +69,7 @@ define(['N','fullPage'],function(){
                        switch (para) {
                            case "success":
                                hideloginResult.innerHTML = "登录成功";
+                               window.localStorage.setItem('userMail', email.value);
                                window.location.href = 'HomePage?email=' + email.value;
                                break;
                            case "password fail":

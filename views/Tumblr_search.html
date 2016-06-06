@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/stylesheets/Tumblr_search.css" rel="stylesheet">
+    <script src="/javascripts/N.js"></script>
+    <script src="/javascripts/domEvent_search.js"></script>
+</head>
+<body>
+<div class="fix-head-container">
+    <div class="header-container">
+        <h1 class="logo"></h1>
+        <div class="search_form">
+            <div class="searchImg"></div>
+            <input type="text" id="search_query" class="search_nonactive" placeholder="搜索 Tumblr" autocomplete="off" required="required">
+        </div>
+        <a class="compose-button"></a>
+        <div class="tab_container">
+            <div class="tab_bar">
+                <a class="tab_anchor" style="background-image: url('images/Tumblr_icon1.png')"></a>
+                <a class="tab_anchor" style="background-image: url('images/Tumblr_icon2.png')"></a>
+                <a class="tab_anchor" style="background-image: url('images/Tumblr_icon3.png')"></a>
+                <a class="tab_anchor" style="background-image: url('images/Tumblr_icon4.png')"></a>
+                <a class="tab_anchor" style="background-image: url('images/Tumblr_icon5.png')"></a>
+                <a class="tab_anchor" style="background-image: url('images/Tumblr_icon6.png')"></a>
+            </div>
+        </div>
+    </div>
+    <div class="discover-controls-wrapper">
+        <div class="types-tabs">
+            <a class="content-control" style="width: 70px"> 为你推荐</a>
+            <a class="content-control" style="width: 45px"> 热门</a>
+            <a class="content-control" style="width: 73px"> 官博精选</a>
+            <a class="content-control" style="width: 45px"> 文字</a>
+            <a class="content-control" style="width: 45px"> 图片</a>
+            <a class="content-control" style="width: 45px"> 动画</a>
+            <a class="content-control" style="width: 45px"> 引用</a>
+            <a class="content-control" style="width: 45px"> 链接</a>
+            <a class="content-control" style="width: 45px"> 对话</a>
+            <a class="content-control" style="width: 45px"> 音频</a>
+            <a class="content-control" style="width: 45px"> 视频</a>
+            <a class="content-control" style="width: 45px"> 提问</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="search_result">
+         <div class="search_sub_header">
+             <h1 class="search_term_heading">wade</h1>
+             <div class="related_searches">
+                <span class="related_searches_label">相关搜索： </span>
+                <a class="search_control_link">marvel</a>
+                <a class="search_control_link">lordminion777</a>
+                <a class="search_control_link">herren</a>
+                <a class="search_control_link">vanessa</a>
+                <a class="search_control_link">negasonic</a>
+             </div>
+         </div>
+         <div class="results">
+             <div class="blog_user_search">         <!-- margin: 0 -320px -->
+                <div class="blog_wrapper">            <!-- 3180 -->
+                    <div class="search_row">
+                        <div class="blog_model">
+                            <div class="navigation">
+                                 <div class="navigation_inner">
+                                     <span class="name">lakersfanatics</span>
+                                     <div class="header_control">
+                                         <span class="user"></span>
+                                         <button class="follow">关注</button>
+                                     </div>
+                                 </div>
+                            </div>
+                            <div class="header_image_wrapper" style="background-image: url('images/Tumblr_search_result1.jpg')"></div>
+                            <div class="avatar_square" style="background-image: url('images/Tumblr_search_kobe.png')"></div>
+                            <div class="info_wrapper">
+                                <div class="info">
+                                    <h1>Die Hard Lakers Fans</h1>
+                                </div>
+                            </div>
+                            <div class="recent_posts">
+                                <img src="images/Tumblr_search_kobe_show1.gif">
+                                <img src="images/Tumblr_search_kobe_show2.jpg">
+                                <img src="images/Tumblr_search_kobe_show3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="left">
+                    <span class="left_icon"></span>
+                </span>
+                <span class="right">
+                    <span class="right_icon"></span>
+                </span>
+                <div class="iScrollHorizontalScrollbar">
+                    <div class="iScrollIndicator"></div>
+                </div>
+             </div>
+             <div class="blog_mask_left"></div>
+             <div class="blog_mask_right"></div>
+             <div class="search_results_bottom_wrapper">
+                <div class="search_controls">
+                    <div class="search_control_items">
+                        <span class="control_text">最热帖子</span>
+                        <span class="icon_down"></span>
+                        <span class="control_text" style="margin-left: 12px">按照帖子类型筛选</span>
+                        <span class="icon_down"></span>
+                    </div>
+                </div>
+
+                 <div id="post">
+                     <div id="search_posts">
+                         <ol class="posts">
+                         <li class="post_container">
+                             <div class="post_wrapper_container">
+                                 <div class="post_wrapper">
+                                     <div class="post_header">
+                                         <div class="post_info_recommended">请看这个博客：
+                                             <a class="post_info_link">darkermoonnow</a>
+                                         </div>
+                                         <div class="post_action_wrapper">
+                                             <div class="discover_button"></div>
+                                         </div>
+                                     </div>
+                                     <div class="post_content">
+                                         <a class="post_media_photo">
+                                             <img src="images/Tumblr_blog_image1.jpg">
+                                         </a>
+                                     </div>
+                                     <div class="post_footer">
+                                         <span class="note_link_current">330,331 热度</span>
+                                         <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                         <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                         <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                     </div>
+                                 </div>
+                             </div>
+                         </li>
+                         <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image2.gif">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                         </li>
+
+                             <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image3.gif">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+                     </ol>
+
+                         <ol class="posts">
+                             <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image2.gif">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image3.gif">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image1.jpg">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+
+                         </ol>
+
+                         <ol class="posts">
+                             <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image3.gif">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image1.jpg">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="post_container">
+                                 <div class="post_wrapper_container">
+                                     <div class="post_wrapper">
+                                         <div class="post_header">
+                                             <div class="post_info_recommended">请看这个博客：
+                                                 <a class="post_info_link">darkermoonnow</a>
+                                             </div>
+                                             <div class="post_action_wrapper">
+                                                 <div class="discover_button"></div>
+                                             </div>
+                                         </div>
+                                         <div class="post_content">
+                                             <a class="post_media_photo">
+                                                 <img src="images/Tumblr_blog_image2.gif">
+                                             </a>
+                                         </div>
+                                         <div class="post_footer">
+                                             <span class="note_link_current">330,331 热度</span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img1.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img2.png')"></span>
+                                             <span class="post_img" style="background-image: url('images/Tumblr_post_img3.png')"></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </li>
+                         </ol>
+
+                     </div>
+                 </div>
+
+                 <div id="auto_pagination_loader">
+                     <div class="loading-container">
+                         <div class="Knight-Rider-bar"></div>
+                         <div class="Knight-Rider-bar"></div>
+                         <div class="Knight-Rider-bar"></div>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+    </div>
+</div>
+
+<div id="hiddenSearch" style="display: none;"><%=search%></div>
+</body>
+</html>
